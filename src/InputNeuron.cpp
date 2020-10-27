@@ -2,28 +2,26 @@
 
 InputNeuron::InputNeuron()
 {
-
 }
 
 InputNeuron::~InputNeuron()
 {
-
 }
 
-void InputNeuron::initialize(int nI,double* inputs)
+void InputNeuron::initialize(int pnT,double* inputs)
 {
-    nT=nI;
+    nT=pnT;
     for(int i=0;i<nT;i++)
     {
         activations[i]=inputs[i];
     }
 }
 
-void InputNeuron::addnext(Neuron *other,int n)
+void InputNeuron::addnext(Neuron *pNext,int n)
 {
     nnext=n;
     for(int i=0;i<nnext;i++)
     {
-        next[i]=other[i];
+        next[i]=pNext[i];
     }
 }

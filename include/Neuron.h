@@ -5,16 +5,16 @@
 class Neuron
 {
     public:
-        //the constructor(not used)
+        //the constructor(empty)
         Neuron();
-        //the destructor (not used)
-        virtual ~Neuron();
+        //the destructor 
+        ~Neuron();
         
         //initializes the Neuron through giving him the number of Neurons in the previous layer
-        void initialize(int n,Neuron* pbefore);
+        void initialize(int n,Neuron* pPrevious);
         
         //adds the pointers to the Neurons of the next Layer
-        void addnext(Neuron *other,int n);
+        void addnext(Neuron *pNext,int n);
         
         //calculates the activations and stores them in activations
         void calc();
@@ -25,7 +25,7 @@ class Neuron
         //improves the weights
         void learn();
         
-        //returns the wI
+        //returns the wheights
         double* getwI();
 
         //returns nT
@@ -74,8 +74,6 @@ class Neuron
 
         //number of input for the next Layer
         int* pos;
-        /*was ist das denn für ein komisches Englisch?
-        ich würde auch nur eine einfach verkettete Liste machen*/
 
         //learnrate stores how fast the Neuron should learn
         double Learnrate;

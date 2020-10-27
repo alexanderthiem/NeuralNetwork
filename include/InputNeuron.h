@@ -8,13 +8,13 @@ class InputNeuron : Neuron
         //the constructor(not used)
         InputNeuron();
         //the destructor (not used)
-        virtual ~InputNeuron();
+        ~InputNeuron();
         
-        //initializes the Neuron through giving him the number of Neurons in the previous layer
-        void initialize(int nI,double* inputs);
+        //initializes the Neuron through giving him the number of Inputs and those inputs
+        void initialize(int pnT,double* inputs);
         
         //adds the pointers to the Neurons of the next Layer
-        void addnext(Neuron *other,int n);
+        void addnext(Neuron *pNext,int n);
 
         //returns an pointer to the activations
         double* getactivations();
