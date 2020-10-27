@@ -74,8 +74,8 @@ class Neuron
 
         //number of input for the next Layer
         int* pos;
-        was ist das denn für ein komisches Englisch?
-        ich würde auch nur eine einfach verkettete Liste machen
+        /*was ist das denn für ein komisches Englisch?
+        ich würde auch nur eine einfach verkettete Liste machen*/
 
         //learnrate stores how fast the Neuron should learn
         double Learnrate;

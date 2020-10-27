@@ -7,12 +7,12 @@ Network::Network(int nL, int nN, int nXi)
     nNeurons=nN;
     nLayer=nL;
     layers= new Layer[nL];
-    for(int i=0; i<nL;i++)
+    /*for(int i=0; i<nL;i++)
     {
         layers[i].initialize(nN,nXi);
         activations[i] = new double[3*nN];
         activations[i] = &activations[i][2*nN];
-    }
+    }*/
 }
 
 Network::~Network()
@@ -22,19 +22,20 @@ Network::~Network()
 
 void Network::calc(double *inputs)
 {
-    layers[0].calc(inputs);
+    /*layers[0].calc(inputs);
     activations[0]=layers[0].getactivations();
     for(int i=1;i<nLayer;i++)
     {
         layers[i].calc(activations[i-1]);
         activations[i]=layers[i].getactivations();
-    }
+    }*/
 }
 
 
 
 void Network::learn(double *outputs,double inputs[])
 {
+    /*
     double *Fehler=new double[nNeurons];
     //std::cout << outputs[0] <<"-"<< activations[nLayer-1][0];
     for(int i=0;i<nNeurons;i++)
@@ -55,6 +56,7 @@ void Network::learn(double *outputs,double inputs[])
         }
     }
     layers[0].learn(Fehler,inputs);
+    */
 }
 
 double* Network::getoutput()
